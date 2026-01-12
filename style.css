@@ -1,111 +1,143 @@
+/* Reset dasar untuk konsistensi */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Font dan body dasar */
 body {
-  background: #f7f7f7;
-  color: #222;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
-/* NAVBAR */
+/* Container untuk responsivitas */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
 .navbar {
-  background: #1a1a1a;
-  color: white;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.navbar h1 { font-size: 20px; }
-
-.btn-wa {
-  color: white;
-  background: #25d366;
-  padding: 8px 14px;
-  border-radius: 6px;
-  text-decoration: none;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
 }
 
-/* HERO */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+}
+
+/* Hero Section */
 .hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: white;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    background-color: #fff;
+    padding: 100px 20px 60px; /* Padding atas lebih besar untuk navbar fixed */
+    text-align: center;
 }
-.hero h2 { font-size: 26px; margin-bottom: 10px; }
-.hero p { color: #555; margin-bottom: 20px; }
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
 .btn-primary {
-  display: inline-block;
-  background: #1a1a1a;
-  color: white;
-  padding: 12px 22px;
-  border-radius: 6px;
-  text-decoration: none;
+    background-color: #25D366;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s;
 }
 
-/* LAYANAN */
+.btn-primary:hover {
+    background-color: #128C7E;
+}
+
+/* Section Layanan */
 .layanan {
-  padding: 40px 20px;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
 }
+
 .layanan h2 {
-  text-align: center;
-  margin-bottom: 25px;
-}
-.layanan-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-.card {
-  background: white;
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
-}
-.card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-.card h3 {
-  margin-bottom: 8px;
-  color: #222;
-}
-.card p {
-  color: #555;
-  font-size: 14px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
 }
 
-/* TENTANG */
+.layanan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.layanan-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.layanan-item h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.layanan-item p {
+    color: #666;
+}
+
+/* Tentang Kami */
 .tentang {
-  background: white;
-  padding: 40px 20px;
-  text-align: center;
-  margin-top: 30px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    padding: 60px 20px;
+    background-color: #fff;
 }
 
-/* KONTAK */
-.kontak {
-  padding: 40px 20px;
-  text-align: center;
-}
-.kontak a {
-  color: #25d366;
-  text-decoration: none;
+.tentang h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-/* FOOTER */
-footer {
-  background: #1a1a1a;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  margin-top: 20px;
-}
+.tentang p {
+    text-align: center;
+    color: #666;
+    max-width: 800px;
